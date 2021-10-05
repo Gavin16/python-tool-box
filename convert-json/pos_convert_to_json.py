@@ -44,12 +44,12 @@ def batch_convert_to_json():
         "files/to-json/06新兴产业领域企业分布热力图-内蒙-云计算大数据.csv"
     ]
     dest_file_paths = [
-        "files/to-json/地理热力图-内蒙-高端装备.convert-json",
-        "files/to-json/地理热力图-内蒙-蒙中医药.convert-json",
-        "files/to-json/地理热力图-内蒙-生物科技.convert-json",
-        "files/to-json/地理热力图-内蒙-新材料.convert-json",
-        "files/to-json/地理热力图-内蒙-新能源.convert-json",
-        "files/to-json/地理热力图-内蒙-云计算大数据.convert-json"
+        "files/to-json/地理热力图-内蒙-高端装备.json",
+        "files/to-json/地理热力图-内蒙-蒙中医药.json",
+        "files/to-json/地理热力图-内蒙-生物科技.json",
+        "files/to-json/地理热力图-内蒙-新材料.json",
+        "files/to-json/地理热力图-内蒙-新能源.json",
+        "files/to-json/地理热力图-内蒙-云计算大数据.json"
     ]
 
     for index in range(len(source_file_paths)):
