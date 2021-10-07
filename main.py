@@ -3,38 +3,42 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+import pickle
 from module_A.fibo import *
 import module_A.fibo
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print('Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+"""
+pickle 模块使用: 保存/加载内存数据
+"""
+
+aaa = "python is so useful that you'd better pick it"
+
+
+def test_pickle():
+    print(aaa)
+    test_pickle_write()
+    test_pickle_read()
+
+
+def test_pickle_write():
+    data1 = {"a": "123", "b": "def", 123: 666}
+    data2 = [1, 2, 3, 4]
+    output = open('data.pkl', 'wb+')
+    pickle.dump(data1, output)
+    pickle.dump(data2, output)
+    output.close()
+
+
+def test_pickle_read():
+    pkl_input = open('data.pkl', 'rb')
+    data1 = pickle.load(pkl_input)
+    data2 = pickle.load(pkl_input)
+    pkl_input.close()
+    print(data1)
+    print(data2)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    fib(500)
-    print(dir(module_A.fibo))
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-
-# __all__ :
-
-# __builtins__ :
-
-# __cached__ :
-
-# __doc__ :
-
-# __file__ :
-
-# __loader__ :
-
-# __name__ :
-
-# __package__ :
-
-# __spec__ :
+    test_pickle()
