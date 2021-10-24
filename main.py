@@ -24,14 +24,14 @@ def test_pickle():
 def test_pickle_write():
     data1 = {"a": "123", "b": "def", 123: 666}
     data2 = [1, 2, 3, 4]
-    output = open('data.pkl', 'wb+')
+    output = open('cache/data.pkl', 'wb+')
     pickle.dump(data1, output)
     pickle.dump(data2, output)
     output.close()
 
 
 def test_pickle_read():
-    pkl_input = open('data.pkl', 'rb')
+    pkl_input = open('cache/data.pkl', 'rb')
     data1 = pickle.load(pkl_input)
     data2 = pickle.load(pkl_input)
     pkl_input.close()
