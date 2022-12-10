@@ -25,7 +25,7 @@ import ddddocr
 
 def image_ocr():
     ocr = ddddocr.DdddOcr()
-    with open('img.png', 'rb') as f:
+    with open('capture.png', 'rb') as f:
         img_bytes = f.read()
     res = ocr.classification(img_bytes)
 

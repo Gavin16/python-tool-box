@@ -19,6 +19,7 @@ def test_module_dump():
 if __name__ == "__main__":
     test_module_dump()
     reg2 = _joblib.load("linear_reg.pkl")
+    print(type(reg2))
     new_res = reg2.predict([[5, 5]])
     print(new_res)
 
